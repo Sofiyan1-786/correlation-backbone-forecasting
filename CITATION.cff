@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: "Topology-Aware Dimensionality Reduction via Minimum Dominating Sets"
+type: software
+authors:
+  - family-names: Firdous
+    given-names: Saleha
+  - family-names: Mohammed
+    given-names: Sofiyan
