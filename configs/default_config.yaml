@@ -1,0 +1,35 @@
+seed: 42
+
+data:
+  tickers_file: data/tickers.csv
+  raw_prices_file: data/raw_prices.parquet
+  returns_file: data/returns.parquet
+
+outputs:
+  correlation_file: analysis_outputs/correlation_matrix.csv
+  adjacency_file: analysis_outputs/adjacency.npy
+  mds_nodes_file: analysis_outputs/mds_nodes.csv
+  random_nodes_file: analysis_outputs/random_nodes.csv
+  predictions_file: analysis_outputs/predictions.csv
+  results_file: analysis_outputs/results.csv
+  stats_file: analysis_outputs/statistical_summary.txt
+
+download:
+  start_date: "2016-01-01"
+  end_date: "2025-12-31"
+  interval: "1d"
+
+split:
+  topology_ratio: 0.50
+  train_ratio: 0.75
+
+network:
+  threshold: 0.35
+
+model:
+  seq_len: 30
+  hidden_dim: 32
+  dropout: 0.20
+  epochs: 20
+  batch_size: 32
+  learning_rate: 0.001
